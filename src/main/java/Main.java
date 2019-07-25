@@ -8,30 +8,28 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        IntNumber intNumber = new IntNumber();
+        CheckOut intNumber = new CheckOut();
         System.out.print("Enter the text to check for the palindrome: ");
         String text = scanner.nextLine();
         try {
-            IsPalindrome.isPalindrome(text);
+            CheckOut.isPalindrome(text);
         } catch (NotPalindromeException e) {
             System.out.println(e.getMessage());
         }
         try {
             intNumber.randomNumber();
-        } catch (IntOddNumberException|GreaterThanHundredException e) {
+        } catch (IntOddNumberException | GreaterThanHundredException e) {
             System.out.println(e.getMessage());
         }
-        try{
-            IntNumber random = new IntNumber();
+        try {
+            CheckOut random = new CheckOut();
             random.randomObject();
-        }catch (NullObjectException e){
+        } catch (NullObjectException e) {
             System.out.println(e.getMessage());
         }
 
         scanner.close();
-
     }
-
 }
 
 

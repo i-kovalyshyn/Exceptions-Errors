@@ -1,7 +1,7 @@
 package main.java.exception;
 
 public class GreaterThanHundredException extends Exception {
-    GreaterThanHundredException(String msg){
+    GreaterThanHundredException(String msg) {
         super(msg);
     }
 }

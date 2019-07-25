@@ -1,7 +1,7 @@
 package main.java.exception;
 
 public class IntOddNumberException extends Exception {
-    IntOddNumberException(String msg){
+    IntOddNumberException(String msg) {
         super(msg);
     }
 }
