@@ -13,16 +13,19 @@ public class Main {
             System.out.print("Enter the text to check for the palindrome: ");
             String text = scanner.nextLine();
             CheckOut.isPalindrome(text);
-            object.randomNumber();
-            object.randomObject();
         } catch (NotPalindromeException e) {
             System.out.println(e.getMessage());
+        }
+        try {
+            object.randomNumber();
         } catch (IntOddNumberException | GreaterThanHundredException e) {
             System.out.println(e.getMessage());
+        }
+        try {
+            object.randomObject();
         } catch (NullObjectException e) {
             System.out.println(e.getMessage());
         }
-
     }
 }
 
