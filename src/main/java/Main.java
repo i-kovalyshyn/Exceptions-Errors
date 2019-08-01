@@ -7,27 +7,22 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         CheckOut object = new CheckOut();
-        System.out.print("Enter the text to check for the palindrome: ");
-        String text = scanner.nextLine();
-        try {
+
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter the text to check for the palindrome: ");
+            String text = scanner.nextLine();
             CheckOut.isPalindrome(text);
+            object.randomNumber();
+            object.randomObject();
         } catch (NotPalindromeException e) {
             System.out.println(e.getMessage());
-        }
-        try {
-            object.randomNumber();
         } catch (IntOddNumberException | GreaterThanHundredException e) {
             System.out.println(e.getMessage());
-        }
-        try {
-            object.randomObject();
         } catch (NullObjectException e) {
             System.out.println(e.getMessage());
         }
 
-        scanner.close();
     }
 }
 
